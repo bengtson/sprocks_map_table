@@ -3,16 +3,16 @@ defmodule SprocksMapTable do
   Documentation for SprocksMapTable.
   """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> SprocksMapTable.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def read_file file do
+    SprocksMapTable.Reader.read_file file
   end
+
+  def read_string string do
+    SprocksMapTable.Reader.parse_string string
+  end
+
+  def get_value record, key do
+    SprocksMapTable.Access.get_value record, key
+  end
+
 end

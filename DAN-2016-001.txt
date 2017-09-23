@@ -1,0 +1,85 @@
+:: TABLE :: main
+Amount :Double: 0.0
+Charges :MapTable: 1
+Claim Date :: 18-May-2016
+Claim Number :: DAN-2016-001
+Claim Status :: Submitted
+Contacts :MapTable: 2
+Customer :: Macy's
+Data :MapTable: 3
+Date Reference :Double: 25569.0
+Job Reference :: AIT MCAM-01601 91294 Form 010 / 020
+Manufacturer :: Sappi 
+Mill :: Sappi
+Mill Order :: 7780803
+Plant :: Danville
+Plant Reference :: Internal RRD Billing: 565823-270027
+Problem Description :: We encountered paper quality issues; Wrinkles throughout entire roll on  36.875" X 60# Sappi Somerset, creating excess run waste
+Purchase Order :: 71-19283
+Supplemental Information :MapTable: 4
+Template Version :: 2.4
+
+:: TABLE :: 1
+Amount :Double: 0.0
+Charge Each :Double: 0.0
+Description :: Web Breaks
+Quantity :Double: 0.0
+
+Amount :Double: 0.0
+Charge Each :Double: 0.0
+Description :: Handling
+Quantity :Double: 0.0
+
+Amount :Double: 0.0
+Charge Each :Double: 0.0
+Description :: Paper Waste
+Notation :: Units in LBS Form 010
+Quantity :Double: 7383.0
+
+Amount :Double: 0.0
+Charge Each :Double: 0.0
+Description :: Paper Waste
+Notation :: Units In LBS Form 020
+Quantity :Double: 2069.0
+
+:: TABLE :: 2
+Address Line 1 :: 3201 Lebanon Rd
+City :: Danville
+Company :: RR Donnelley
+Email :: brandon.b.long@rrd.com
+First Name :: Brandon
+Last Name :: Long
+Phone :: 859.238.2534
+Plant :: Danville
+Select :: from, plant
+State :: KY
+Title :: Materials Coordinator
+Zip :: 40422
+
+Address Line 1 :: 89 Cumberland Street
+City :: Westbrook
+Company :: Sappi 
+Email :: ron.harrison@sappi.com
+First Name :: Ron
+Last Name :: Harrison
+Phone :: 931-436-6260
+Plant :: Sappi
+Salutation :: Dear Ron,
+Select :: to, manufacturer,mill,
+State :: ME
+Title :: Technical Services 
+Zip :: 04092
+
+Address Line 1 ::  
+City ::  
+Company :: Macy's
+First Name ::  
+Last Name ::  
+Plant ::  
+Select :: for,against,
+State ::  
+Title :: Paper Buyer
+Zip ::  
+
+:: TABLE :: 3
+:: TABLE :: 4

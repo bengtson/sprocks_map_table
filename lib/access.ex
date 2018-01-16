@@ -7,7 +7,7 @@ defmodule SprocksMapTable.Access do
     {error, :not_found}
   """
   def get_value(record, key) do
-    with {key, v} <- get_key_value(record, key)
+    with {_key, v} <- get_key_value(record, key)
     do
       {:ok, v}
     else

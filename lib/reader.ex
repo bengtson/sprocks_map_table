@@ -23,6 +23,9 @@ defmodule SprocksMapTable.Reader do
   Process requires two passes, one to collect the table and any nested tables
   then a second pass to put the nested tables into the main table.
   """
+  def parse_lines([":: TABLE :: main",""]), do: []
+  def parse_lines([":: TABLE :: main"]), do: []
+  
   def parse_lines lines do
     lines
 #      |> String.split("\n")
@@ -56,7 +59,7 @@ defmodule SprocksMapTable.Reader do
     end
   end
 
-  defp parse_table table, record, name, [] do
+  defp parse_table table, _record, name, [] do
     {table, name, []}
   end
 
@@ -105,12 +108,12 @@ defmodule SprocksMapTable.Reader do
 
   # Scan the specified table inserting any nested tables.
   defp insert_tables tables, name do
-    table = tables[name]
+    tables[name]
     |> Enum.map(&(insert_scan_record(&1, [name], tables)))
   end
 
   # Scan the provided record for nested tables.
-  defp insert_scan_record record, path, tables do
+  defp insert_scan_record record, _path, tables do
     record
     |> Enum.map(&(insert_scan_kv(&1, tables)))
   end

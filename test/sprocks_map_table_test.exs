@@ -8,7 +8,7 @@ defmodule SprocksMapTableTest do
     |> SprocksMapTable.read_file
     assert length(table) == 2
 
-    [a,b] = table
+    [a,_b] = table
     assert {:ok, "22"} == SprocksMapTable.get_value(a,"Event Day")
 
   end
@@ -27,5 +27,18 @@ defmodule SprocksMapTableTest do
     [ [{"test", v}, _]] = list
     assert v == "value"
 
+  end
+  
+  test "zero record table" do
+    
+    table = "test/data/zero_record_file"
+    |> SprocksMapTable.read_file
+    assert length(table) == 0  
+  end
+  
+  test "zero record string" do
+    table = ":: TABLE :: main"
+    |> SprocksMapTable.Reader.parse_string
+    assert length(table) == 0
   end
 end

@@ -4,7 +4,7 @@ defmodule SprocksMapTable.Mixfile do
   def project do
     [
       app: :sprocks_map_table,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps()
@@ -14,7 +14,7 @@ defmodule SprocksMapTable.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: []
     ]
   end
 
